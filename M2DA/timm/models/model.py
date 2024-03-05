@@ -8,7 +8,7 @@ from torch import nn
 import torch.nn.functional as F
 
 from ..utils import utils
-from .cgru import ConvGRU
+from .cgru_train import ConvGRU
 from .MobileNetV2 import MobileNetV2, InvertedResidual
 
 
