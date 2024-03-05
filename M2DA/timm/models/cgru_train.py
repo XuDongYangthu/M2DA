@@ -219,7 +219,7 @@ class ConvGRUCell(nn.Module):
         """Generate a dropout mask for recurrent dropout"""
         with torch.no_grad():
             mask = Bernoulli(torch.full((n, ch), 1 - p)).sample() / (1 - p)
-            mask = mask.requires_grad_(False).cuda()
+            mask = mask.requires_grad_(False).cpu()
             return mask
 
     def apply_dropout(self, x, idx, sub_idx):
