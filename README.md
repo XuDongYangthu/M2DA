@@ -122,7 +122,7 @@ for dirs in os.listdir(init_dir):
 the checkpoint as follows, move it to leaderboard/team_codes:
 - [M2DA.tar](https://cloud.tsinghua.edu.cn/f/b9d5ad6332774b7baaf0/?dl=1)
   
-Moreover, download the pretain weight [here](http://43.159.60.142/s/p2CN) to the root path
+Moreover, download the pretrain weight [here](http://43.159.60.142/s/p2CN) to the root path, rename it as pretrain.tar.
 
 **Note:** whem we begin to train M2DA, please modify the M2DA/timm/models/model.py, change the *from .cgru import ConvGRU* to *from .cgru_train import ConvGRU*.
 

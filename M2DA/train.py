@@ -930,7 +930,7 @@ def main():
         freeze_num=args.freeze_num,
     )
 
-    pretext_model = torch.load('pretain.tar', map_location='cpu')['state_dict']
+    pretext_model = torch.load('pretrain.tar', map_location='cpu')['state_dict']
     model2_dict = model.state_dict()
     state_dict = {k:v for k,v in pretext_model.items() if k in model2_dict.keys()}
     model2_dict.update(state_dict)
