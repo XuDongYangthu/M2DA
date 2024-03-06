@@ -123,6 +123,9 @@ the checkpoint as follows, move it to leaderboard/team_codes:
 - [M2DA.tar](https://cloud.tsinghua.edu.cn/f/b9d5ad6332774b7baaf0/?dl=1)
   
 Moreover, download the pretain weight [here](http://43.159.60.142/s/p2CN) to the root path
+
+**Note:** whem we begin to train M2DA, please modify the M2DA/timm/models/model.py, change the *from .cgru import ConvGRU* to *from .cgru_train import ConvGRU*.
+
 ## Evaluation
 Spin up a CARLA server (described above) and run the required agent. The adequate routes and scenarios files are provided in ```leaderboard/data``` and the required variables need to be set in ```leaderboard/scripts/run_evaluation.sh```.
 Update ```leaderboard/scripts/run_evaluation.sh``` to include the following code for evaluating the model on Town05 Long Benchmark.
